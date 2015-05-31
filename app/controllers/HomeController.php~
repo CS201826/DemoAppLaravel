@@ -1,0 +1,66 @@
+<?php
+
+class HomeController extends BaseController 
+{
+
+	/** 
+	 * Method to display home page
+	 *
+	 * @param null
+	 * @return response
+	 */
+	public function index()
+	{
+		$title = "Home";
+		$article = Article::where('published', '=', '1')->first();
+		return View::make('home.home')->with('article', $article);
+	}
+
+
+	/** 
+	 * Method to display about page
+	 *
+	 * @param null
+	 * @return response
+	 */
+	public function about()
+	{		
+		return View::make('home.about');
+	}
+
+
+	/** 
+	 * Method to display team page
+	 *
+	 * @param null
+	 * @return response
+	 */
+	public function team()
+	{		
+		return View::make('home.team');
+	}
+
+
+	/** 
+	 * Method to display services page
+	 *
+	 * @param null
+	 * @return response
+	 */
+	public function service()
+	{		
+		return View::make('home.service');
+	}
+
+
+	/** 
+	 * Method to display portfolio page
+	 *
+	 * @param null
+	 * @return response
+	 */
+	public function portfolio()
+	{		
+		return View::make('home.portfolio');
+	}
+}

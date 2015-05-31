@@ -1,0 +1,57 @@
+<?php $__env->startSection('main'); ?>
+
+<h1>Edit User</h1>
+<?php echo Form::model($user, array('method' => 'PATCH', 'route' =>
+ array('users.update', $user->id))); ?>
+
+    <ul>
+        <li>
+            <?php echo Form::label('username', 'Username:'); ?>
+
+            <?php echo Form::text('username'); ?>
+
+        </li>
+        <li>
+            <?php echo Form::label('password', 'Password:'); ?>
+
+            <?php echo Form::text('password'); ?>
+
+        </li>
+        <li>
+            <?php echo Form::label('email', 'Email:'); ?>
+
+            <?php echo Form::text('email'); ?>
+
+        </li>
+        <li>
+            <?php echo Form::label('phone', 'Phone:'); ?>
+
+            <?php echo Form::text('phone'); ?>
+
+        </li>
+        <li>
+            <?php echo Form::label('name', 'Name:'); ?>
+
+            <?php echo Form::text('name'); ?>
+
+        </li>
+        <li>
+            <?php echo Form::submit('Update', array('class' => 'btn btn-info')); ?>
+
+            <?php echo link_to_route('users.show', 'Cancel', $user->
+id, array('class' => 'btn')); ?>
+
+        </li>
+    </ul>
+<?php echo Form::close(); ?>
+
+
+<?php if($errors->any()): ?>
+    <ul>
+        <?php echo implode('', $errors->all('<li class="error">:message</li>')); ?>
+
+    </ul>
+<?php endif; ?>
+
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.users', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

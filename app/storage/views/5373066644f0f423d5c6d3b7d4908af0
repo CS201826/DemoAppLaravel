@@ -1,0 +1,53 @@
+<h1>Create a new category</h1>
+
+<?php if($errors->any()): ?>
+    <ul>
+        <?php echo implode('', $errors->all('<li class="error">:message</li>')); ?>
+
+    </ul>
+<?php endif; ?>
+
+<?php echo Form::open(array('route' => 'categories.store')); ?>
+
+
+	<p>
+		<?php echo Form::label('title'); ?>
+
+		<?php echo Form::text('title'); ?>
+
+	</p>
+
+	<p>
+		<?php echo Form::label('alias'); ?>
+
+		<?php echo Form::text('alias'); ?>
+
+	</p>
+
+	<p>
+		<?php echo Form::label('description'); ?>
+
+		<?php echo Form::text('description'); ?>
+
+	</p>
+
+	<p>
+		<?php echo Form::label('select category'); ?>
+
+		<?php echo Form::select('parent_id', ['Main', 'Root'] ); ?>
+
+	</p>
+
+	<p>
+		<?php echo Form::label('published'); ?>
+
+		<?php echo Form::select('published', ['Yes', 'No']); ?>
+
+	</p>
+
+	<p>
+		<?php echo Form::submit('Save', array('class' => 'btn btn-primary')); ?>
+
+	</p>
+
+<?php echo Form::close(); ?>

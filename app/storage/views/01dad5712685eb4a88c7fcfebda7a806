@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title><?php echo title; ?></title>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- Referencing Css and js files -->
+		<?php echo HTML::style('css/animate.min.css'); ?>
+
+		<?php echo HTML::style('css/bootstrap.min.css'); ?>
+
+		<?php echo HTML::style('css/font-awesome.min.css'); ?>
+
+		<?php echo HTML::style('css/templatemo-style.css'); ?>
+
+
+		<?php echo HTML::script('js/jquery.js'); ?>
+
+		<?php echo HTML::script('js/bootstrap.min.js'); ?>
+
+		<?php echo HTML::script('js/jquery.singlePageNav.min.js'); ?>
+
+		<?php echo HTML::script('js/typed.js'); ?>
+
+		<?php echo HTML::script('js/wow.min.js'); ?>
+
+		<?php echo HTML::script('js/custom.js'); ?>
+
+	</head>
+	<body id="top">
+		<?php echo $__env->yieldContent('content'); ?>;
+	</body>
+</html>

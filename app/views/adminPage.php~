@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<title>Admin</title>
+</head>
+<body>
+<h1>Hello Admin!</h1>
+<?php
+
+$rememberMe = Session::get('rememberMe');
+if($rememberMe == 1) {
+    echo "Logged in via Remember Me";
+}    
+
+
+?><a href="/logout">Logout</a>
+</body>
+</html>

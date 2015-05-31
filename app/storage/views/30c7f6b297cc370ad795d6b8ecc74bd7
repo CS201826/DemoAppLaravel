@@ -1,0 +1,39 @@
+<?php $__env->startSection('title'); ?>
+	Home
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('content'); ?>
+	<!-- start slideshow -->
+	<section id="home">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-offset-2 col-md-8">
+					<h1 class="wow fadeIn" data-wow-offset="50" data-wow-delay="0.9s">We make templates that are <span>awesome</span></h1>
+					<div class="element">
+	                    <div class="sub-element">Hello, this is Typed.js</div>
+	                    <div class="sub-element">Awesome Template is provided by templatemo.com website for everyone</div>
+	                    <div class="sub-element">Download, edit and apply this awesome template for your websites</div>
+	                </div>
+					<?php echo HTML::link('about', 'GET STARTED', array('class' => 'btn btn-default wow fadeInUp') ); ?>
+
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- end slideshow -->
+
+	<section id="about">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h2><?php echo $article->title; ?></h2>
+					<p><?php echo $article->description; ?></p>
+				</div>
+			</div>			
+		</div>
+	</section>
+
+	<?php echo $__env->make('includes.contact', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('layouts.main', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

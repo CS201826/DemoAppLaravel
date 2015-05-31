@@ -1,0 +1,7 @@
+<html>
+    <body>
+        <h1>Welcome to Laravel</h1>
+
+        <?php echo $__env->yieldContent('content'); ?>
+    </body>
+</html>
